@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Sample data extraction rules file; uncomment and customize as needed.
+   See https://developer.android.com/about/versions/12/approximate-location
+   for details.
+   The data extraction rules defined here determine what files will be backed up
+   by BMS and when they should be restored on device.
+-->
+<data-extraction-rules>
+    <domain-config>
+        <domain name="shared_pref" />
+        <domain name="file" />
+        <domain name="database" />
+        <domain name="cache" />
+    </domain-config>
+    <!--
+   <domain-config>
+       <domain name="file">
+           <includes>
+               <include path="path/to/include/file" />
+           </includes>
+           <excludes>
+               <exclude path="path/to/exclude/file" />
+           </excludes>
+       </domain>
+   </domain-config>
+-->
+</data-extraction-rules>
