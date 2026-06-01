@@ -1,6 +1,28 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id("com.android.application") version "8.4.0" apply false
-    id("com.android.library") version "8.4.0" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.23" apply false
+    kotlin("jvm") version "1.9.10"
+    id("org.jmailen.kotlinter") version "4.1.0"
+}
+
+group = "com.ntwa"
+version = "0.1.0"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Kotlin stdlib
+    implementation(kotlin("stdlib"))
+
+    // Testing
+    testImplementation(kotlin("test"))
+    testImplementation("junit:junit:4.13.2")
+}
+
+kotlin {
+    jvmToolchain(11)
+}
+
+tasks.test {
+    useJUnit()
 }
